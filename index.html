@@ -13,10 +13,19 @@
             background-color: #f4f4f9;
         }
         .intro-text {
-            text-align: center;
-            color: #555;
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            color: #444;
             line-height: 1.6;
             margin-bottom: 40px;
+        }
+        .intro-text p {
+            margin-bottom: 15px;
+        }
+        .intro-text p:last-child {
+            margin-bottom: 0;
         }
         .media-item { 
             background: white;
@@ -24,6 +33,9 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 30px; 
+        }
+        .featured {
+            border: 2px solid #4CAF50;
         }
         img, video { 
             max-width: 100%; 
@@ -33,96 +45,113 @@
         h1 { 
             text-align: center; 
             color: #333; 
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         h2 {
-            color: #444;
+            color: #333;
             font-size: 1.2em;
             margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
         p {
             color: #666;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <h1>BINSAT Hardware Experiments</h1>
+    <h1>BINSAT Hardware & Simulation Experiments</h1>
     
     <div class="intro-text">
-        <p>This page showcases the experimental results of the BINSAT hierarchical motion planner. The videos below demonstrate the 16-DoF snake robot executing the "anchor-reach-anchor" navigation maneuver to autonomously navigate highly constrained tunnel environments and avoid spatial obstacles.</p>
+        <p>This page showcases the experimental results of the BINSAT hierarchical motion planner. The videos below demonstrate a 16-DoF snake robot executing the "multi-reaching" behavior to navigate highly constrained environments and avoid spatial obstacles.</p>
+        
+        <p><strong>Hardware Validation:</strong> The first featured video presents our physical hardware experiment, where the snake robot successfully performs two sequential reaching behaviors.</p>
+        
+        <p><strong>Simulation Runs:</strong> The subsequent software videos display 8 simulation runs conducted across 4 distinct environments. Each environment consists of a uniquely oriented set of tunnels. To demonstrate the planner's robustness, each of the 4 environments includes 2 separate runs featuring random spatial displacements of the tunnels.</p>
+    </div>
+
+    <div class="media-item featured">
+        <h2>Hardware Validation: Anchor-Reach-Anchor</h2>
+        <video controls>
+            <source src="exh.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Physical hardware experiment demonstrating the full sequence: the robot anchors its base, aligns its head with the first tunnel, and successfully executes the anchoring behavior inside the tight space before reaching for the final target.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 1</h2>
+        <h2>Environment 1: Run A</h2>
         <video controls>
             <source src="ex1p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 1.</p>
+        <p>Simulation demonstrating the first tunnel orientation.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 2</h2>
+        <h2>Environment 1: Run B (Displaced)</h2>
         <video controls>
             <source src="ex2p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 2.</p>
+        <p>Simulation demonstrating the first tunnel orientation with random spatial displacement.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 3</h2>
+        <h2>Environment 2: Run A</h2>
         <video controls>
             <source src="ex3p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 3.</p>
+        <p>Simulation demonstrating the second tunnel orientation.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 4</h2>
+        <h2>Environment 2: Run B (Displaced)</h2>
         <video controls>
             <source src="ex4p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 4.</p>
+        <p>Simulation demonstrating the second tunnel orientation with random spatial displacement.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 5</h2>
+        <h2>Environment 3: Run A</h2>
         <video controls>
             <source src="ex5p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 5.</p>
+        <p>Simulation demonstrating the third tunnel orientation.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 6</h2>
+        <h2>Environment 3: Run B (Displaced)</h2>
         <video controls>
             <source src="ex6p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 6.</p>
+        <p>Simulation demonstrating the third tunnel orientation with random spatial displacement.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 7</h2>
+        <h2>Environment 4: Run A</h2>
         <video controls>
             <source src="ex7p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 7.</p>
+        <p>Simulation demonstrating the fourth tunnel orientation.</p>
     </div>
 
     <div class="media-item">
-        <h2>Experiment 8</h2>
+        <h2>Environment 4: Run B (Displaced)</h2>
         <video controls>
             <source src="ex8p.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Robot navigating Scene 8.</p>
+        <p>Simulation demonstrating the fourth tunnel orientation with random spatial displacement.</p>
     </div>
 
 </body>
